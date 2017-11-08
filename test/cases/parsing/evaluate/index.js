@@ -6,7 +6,7 @@ it("should evaluate null", function() {
 
 if("shouldn't evaluate expression", function() {
 	var value = "";
-	var x = (value + "") ? "fail" : "ok";
+	var x = (String(value)) ? "fail" : "ok";
 	x.should.be.eql("ok");
 });
 
