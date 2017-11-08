@@ -14,6 +14,6 @@ export function multiply() {
 	return product;
 }
 
-export function list() {
-	return Array.from(arguments);
+export function list(...params) {
+	return Array.from(params);
 }
