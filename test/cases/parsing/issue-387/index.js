@@ -6,7 +6,7 @@ it("should parse cujojs UMD modules", function() {
 			return 123;
 		});
 	}(
-		typeof define == 'function' && define.amd
+		typeof define === 'function' && define.amd
 			? define
 			: function (factory) { module.exports = factory(require); }
 	));
