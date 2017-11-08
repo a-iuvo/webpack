@@ -6,7 +6,7 @@ var ADVANCED_GROUP = "Advanced options:";
 var RESOLVE_GROUP = "Resolving options:";
 var OPTIMIZE_GROUP = "Optimizing options:";
 
-module.exports = function(yargs) {
+module.exports = yargs => {
 	yargs
 		.help("help")
 		.alias("help", "h")
