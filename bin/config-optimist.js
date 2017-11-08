@@ -1,4 +1,4 @@
-module.exports = function(optimist) {
+module.exports = optimist => {
 	optimist
 		.boolean("help").alias("help", "h").alias("help", "?").describe("help")
 		.string("config").describe("config", "Path to the config file")
