@@ -1,7 +1,7 @@
 var should = require("should");
 
 it("should parse fancy function calls", function() {
-	("function"==typeof define && define.amd ?
+	("function"===typeof define && define.amd ?
 		define :
 		function(e,t){return t()}
 	)(["./constructor"], function(c) {
