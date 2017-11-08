@@ -41,7 +41,7 @@ it("should parse cujojs UMD modules with inlinded deps", function() {
 			return require("./file");
 		});
 	}(
-		typeof define == 'function' && define.amd
+		typeof define === 'function' && define.amd
 			? define
 			: function (factory) { module.exports = factory(require); }
 	));
