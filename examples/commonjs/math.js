@@ -1,5 +1,6 @@
 exports.add = function(...params) {
-    var sum = 0, i = 0, args = params, l = args.length;
+    let l = args.length, args = params, i = 0, sum = 0;
+    
     while (i < l) {
         sum += args[i++];
     }
