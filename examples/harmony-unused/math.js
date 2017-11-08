@@ -6,8 +6,8 @@ export function add(...params) {
 	return sum;
 }
 
-export function multiply() {
-	var product = 1, i = 0, args = arguments, l = args.length;
+export function multiply(...params) {
+	var product = 1, i = 0, args = params, l = args.length;
 	while (i < l) {
 		product *= args[i++];
 	}
