@@ -1,1 +1,1 @@
-export default function() { return [].slice.call(arguments); }
+export default function(...params) { return [].slice.call(params); }
