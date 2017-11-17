@@ -22,7 +22,6 @@ cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${displayReasons} 
 	try {
 		readme = tc.replaceResults(fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8"), process.cwd(), stdout.replace(/[\r\n]*$/, ""), "min");
 	} catch (e) {
-		console.log(stderr);
 		throw e;
 	}
 	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${displayReasons} --display-chunks --display-max-modules 99999 --display-origins --display-entrypoints --output-public-path "js/" --output-pathinfo ${extraArgs} ${targetArgs}`, function(error, stdout, stderr) {
