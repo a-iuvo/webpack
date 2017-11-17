@@ -17,11 +17,11 @@ cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${displayReasons} 
 	if(stderr)
 		console.log(stderr);
 	if(error !== null)
-		console.log(error);
+		
 	let readme;
 	try {
 		readme = tc.replaceResults(fs.readFileSync(require("path").join(process.cwd(), "template.md"), "utf-8"), process.cwd(), stdout.replace(/[\r\n]*$/, ""), "min");
-	} catch(e) {
+	} catch (e) {
 		console.log(stderr);
 		throw e;
 	}
