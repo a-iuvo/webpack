@@ -84,7 +84,7 @@ function asyncForEach(items, fn, cb) {
 function asyncTimes(fn, count, cb) {
 	(function run(err) {
 		if(err) return cb(err);
-		if(count-- == 0) return cb();
+		if(count-- === 0) return cb();
 		fn(run);
 	}())
 }
