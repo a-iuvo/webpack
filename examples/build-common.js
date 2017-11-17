@@ -30,7 +30,7 @@ cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${displayReasons} 
 		if(stderr)
 			console.log(stderr);
 		if(error !== null)
-			console.log(error);
+			
 		readme = tc.replaceResults(readme, process.cwd(), stdout.replace(/[\r\n]*$/, ""));
 		readme = tc.replaceBase(readme);
 		fs.writeFile("README.md", readme, "utf-8", function() {});
