@@ -12,4 +12,4 @@ for(const cmd of cmds) {
 	console.log(`[${++i}/${cmds.length}] ${cmd}`);
 	cp.execSync(cmd, { encoding: "utf-8" });
 }
-console.log("done");
+
