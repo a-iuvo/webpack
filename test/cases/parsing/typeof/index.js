@@ -40,7 +40,7 @@ it("should answer typeof System.import correctly", function() {
 it("should not parse filtered stuff", function() {
 	if(typeof require != "function") require("fail");
 	if(typeof require !== "function") require("fail");
-	if(!(typeof require == "function")) require("fail");
+	if(!(typeof require === "function")) require("fail");
 	if(!(typeof require === "function")) require("fail");
 	if(typeof require == "undefined") require = require("fail");
 	if(typeof require === "undefined") require = require("fail");
