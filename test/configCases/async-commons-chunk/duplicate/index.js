@@ -5,7 +5,7 @@ it("should load nested commons chunk", function(done) {
 		require.ensure(["./c", "./d"], function(require) {
 			require("./c").should.be.eql("c");
 			require("./d").should.be.eql("d");
-			if(++counter == 4) done();
+			if(++counter === 4) done();
 		});
 		require.ensure(["./c", "./e"], function(require) {
 			require("./c").should.be.eql("c");
