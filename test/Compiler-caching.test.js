@@ -26,8 +26,8 @@ describe("Compiler (caching)", function() {
 		const c = webpack(options);
 		const files = {};
 		c.outputFileSystem = {
-			join: function() {
-				return [].join.call(arguments, "/").replace(/\/+/g, "/");
+			join: function(...params) {
+				return [].join.call(params, "/").replace(/\/+/g, "/");
 			},
 			mkdirp: function(path, callback) {
 				logs.mkdirp.push(path);
@@ -103,7 +103,7 @@ describe("Compiler (caching)", function() {
 		function ignoreENOENT(fn) {
 			try {
 				return fn();
-			} catch(e) {
+			} catch (e) {
 				if(e.code !== "ENOENT") {
 					throw e;
 				}
@@ -125,7 +125,7 @@ describe("Compiler (caching)", function() {
 				fs.unlinkSync(cFilepath);
 				fs.rmdirSync(tempFixturePath);
 			}
-		} catch(e) {
+		} catch (e) {
 			if(e.code !== "ENOENT") {
 				throw e;
 			}
