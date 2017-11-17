@@ -5,7 +5,7 @@ var fixtures = path.join(__dirname, "fixtures");
 
 try {
 	fs.mkdirSync(fixtures);
-} catch(e) {}
+} catch (e) {}
 
 function genModule(prefix, depth, asyncDepth, multiplex, r, circular) {
 	var source = [];
@@ -17,7 +17,7 @@ function genModule(prefix, depth, asyncDepth, multiplex, r, circular) {
 	var sum = 1;
 	try {
 		fs.mkdirSync(path.resolve(fixtures, prefix));
-	} catch(e) {}
+	} catch (e) {}
 	if(depth > 0) {
 		for(var i = 0; i < m; i++) {
 			sum += genModule(prefix + "/" + i, depth - 1, asyncDepth, multiplex, (r + i + depth) * m + i + depth, circular);
@@ -44,7 +44,6 @@ for(var i = 2; i < 14; i++) {
 
 for(i = 2; i < 14; i++) {
 	count = genModule("async-tree-" + i, 6, 1, i, 0, []);
-	console.log("generated async tree", i, count);
 }
 
 var a = genModule("module-async", 7, 1, 3, 2, []);
