@@ -8,7 +8,7 @@ it("should parse fancy function calls", function() {
 		return new c(1324);
 	});
 	module.exports.should.have.property("value").be.eql(1324);
-	(("function"==typeof define && define.amd ?
+	(("function"===typeof define && define.amd ?
 		define :
 		function(e,t){return t()}
 	)(["./constructor"], function(c) {
