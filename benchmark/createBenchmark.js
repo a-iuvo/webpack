@@ -18,5 +18,5 @@ webpack({
 		new webpack.NormalModuleReplacementPlugin(/^.\/loadLoader$/, path.resolve(__dirname, "./createBenchmark/loadLoader"))
 	]
 }, (err, stats) => {
-	console.log(stats.toString());
+	
 });
