@@ -37,8 +37,8 @@ describe("Stats", () => {
 			compilers.forEach((c) => {
 				const ifs = c.inputFileSystem;
 				c.inputFileSystem = Object.create(ifs);
-				c.inputFileSystem.readFile = function() {
-					const args = Array.prototype.slice.call(arguments);
+				c.inputFileSystem.readFile = function(...params) {
+					const args = Array.prototype.slice.call(params);
 					const callback = args.pop();
 					ifs.readFile.apply(ifs, args.concat([(err, result) => {
 						if(err) return callback(err);
