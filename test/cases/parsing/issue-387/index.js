@@ -22,7 +22,7 @@ it("should parse cujojs UMD modules with deps", function() {
 		});
 
 	}(
-		typeof define == 'function' && define.amd
+		typeof define === 'function' && define.amd
 			? define
 			: function (ids, factory) {
 				// note: the lambda function cannot be removed in some CJS environments
